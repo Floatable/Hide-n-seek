@@ -131,16 +131,18 @@ class Wall(py.sprite.Sprite):
     self.image.fill(color)
     self.rect.x = wall_x
     self.rect.y = wall_y
-
+color = bluegrey 
 wall_sprites = py.sprite.Group()
-wall_1 = Wall(45, 52, 3, 213, bluegrey)
-wall_2 = Wall(45, 52, 173, 4, bluegrey)
-wall_3 = Wall(217, 52, 4, 182, bluegrey)
-wall_sprites.add(wall_1,wall_2,wall_3)
-
+wall_1 = Wall(45, 52, 3, 213, color)
+wall_2 = Wall(45, 52, 173, 4, color)
+wall_3 = Wall(217, 52, 4, 182, color)
+wall_4 = Wall(45, 236, 35, 4, color)
+wall_5 = Wall(115,234,57,4,color)
+wall_sprites.add(wall_1,wall_2,wall_3,wall_4,wall_5)
+dcolor = grey
 door_sprites = py.sprite.Group()
-
-door_sprites.add
+door_1 = Wall(79,236,35,4,dcolor)
+door_sprites.add(door_1)
 
 player_1_sprite = py.sprite.Group()
 player_1 = Player(100,100,black)
