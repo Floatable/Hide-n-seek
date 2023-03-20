@@ -147,18 +147,41 @@ wall_8 = Wall(10,264,60,4,color)
 wall_9 = Wall(10,264,4,135,color)
 wall_10 = Wall(10,395,60,4,color)
 wall_11 = Wall(52,296,4,72,color)
+wall_12 = Wall(136,307,66,4,color)
+wall_13 = Wall(157,346,4,85,color)
+wall_14 = Wall(137,355,23,4,color)
+wall_15 = Wall(45,399,4,118,color)
+wall_16 = Wall(45,426,40,4,color)
+wall_17 = Wall(118,426,43,4,color)
+wall_18 = Wall(46,513,152,3,color)
+wall_19 = Wall(197,287,5,295,color)
+wall_20 = Wall(160,385,39,5,color)
+wall_21 = Wall(185,426,14,4,color)
+wall_22 = Wall(197,287,27,3,color)
+wall_23 = Wall(217,238,8,7,color)
+wall_24 = Wall(226,454,134,4,color)
+
 
 wall_sprites.add(wall_1,wall_2,wall_3,
 wall_4,wall_5,wall_6,
 wall_7,wall_8,wall_9,
-wall_10,wall_11)
+wall_10,wall_11,wall_12,
+wall_13,wall_14,wall_15,
+wall_16,wall_17,wall_18,
+wall_19,wall_20,wall_21,
+wall_22,wall_23,wall_24)
 
 
 dcolor = grey
 door_sprites = py.sprite.Group()
 door_1 = Wall(79,236,35,4,dcolor)
 door_2 = Wall(172,235,35,4,dcolor)
-door_sprites.add(door_1,door_2)
+door_3 = Wall(157,318,4,29,dcolor)
+door_4 = Wall(85,427,32,4,dcolor)
+door_5 = Wall(161,426,24,4,dcolor)
+door_6 = Wall(162,288,39,1,dcolor)
+door_sprites.add(door_1,door_2,door_3,
+door_4,door_5)
 
 player_1_sprite = py.sprite.Group()
 player_1 = Player(100,100,black)
@@ -182,6 +205,16 @@ while not loop:
             loop = True
         elif event.type == py.MOUSEBUTTONDOWN:  # or MOUSEBUTTONDOWN depending on what you want.
             print(py.mouse.get_pos())
+    if event.type == py.KEYDOWN:
+      if event.key == py.K_q:
+        x1input = input("X1: ")
+        y1input = input("Y1: ")
+        x2input = input("X2: ")
+        y2input = input("Y2: ")
+        xdiff = x1input - x2input
+        ydiff = y1input - y2input
+        print(f"Wall({x1input},{y1input},{xdiff},{ydiff},color)")
+
 
     # this defines how the player moves
 
@@ -223,8 +256,6 @@ while not loop:
     # tells the program how to define certain colors used later
 
     # sets the font
-    myfont = py.font.SysFont("monospace", 15)
-
     # Creates the labels for items or the text that appears on the Main
     # The Bread doesnt do anything and is there souly for my entertainment
 #-----------------------------------------------------------------
