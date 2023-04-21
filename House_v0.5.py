@@ -160,7 +160,7 @@ wall_21 = Wall(185,426,14,4,color)
 wall_22 = Wall(197,287,27,3,color)
 wall_23 = Wall(217,238,8,7,color)
 wall_24 = Wall(226,454,134,4,color)
-
+#https://coolors.co/818479-b5cbb7-d2e4c4-e4e9b2-e7e08b
 
 wall_sprites.add(wall_1,wall_2,wall_3,
 wall_4,wall_5,wall_6,
